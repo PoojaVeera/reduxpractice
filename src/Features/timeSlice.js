@@ -4,15 +4,17 @@ const times = new Date();
 export const timeSlice = createSlice({
   name: "time",
   initialState: {
-    // value: times.getMinutes(),
     value: times.getMinutes(),
   },
   reducers: {
     time: (state) => {
-      state.value = times.getMinutes();
+      state.value = times.getMinutes() + times.getSeconds();
+    },
+    handleAnswer: (state) => {
+      state.value = state + 2;
     },
   },
 });
 
-export const { time } = timeSlice.actions;
+export const { time, handleAnswer } = timeSlice.actions;
 export default timeSlice.reducer;
