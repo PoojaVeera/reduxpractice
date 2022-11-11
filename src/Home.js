@@ -1,3 +1,4 @@
+import { Button } from "@progress/kendo-react-buttons";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +8,10 @@ export const Home = () => {
   return (
     <div>
       Home
-      <button onClick={() => navigate("/Page1")}>click me </button>
+      <br />
+      <Button onClick={() => navigate("/Page1")}>
+        click for mathematical operations
+      </Button>
     </div>
   );
 };
