@@ -9,7 +9,6 @@ import {
   multiply,
   divide,
 } from "../Features/CounterSlice";
-import { handleAnswer } from "../Features/timeSlice";
 import { Button } from "@progress/kendo-react-buttons";
 export const Page1 = () => {
   const [num, setNum] = useState(0);
