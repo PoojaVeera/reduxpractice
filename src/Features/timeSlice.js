@@ -10,11 +10,8 @@ export const timeSlice = createSlice({
     time: (state) => {
       state.value = times.getMinutes() + times.getSeconds();
     },
-    handleAnswer: (state) => {
-      state.value = state + 2;
-    },
   },
 });
 
-export const { time, handleAnswer } = timeSlice.actions;
+export const { time } = timeSlice.actions;
 export default timeSlice.reducer;
