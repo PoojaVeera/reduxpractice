@@ -12,17 +12,17 @@ export const counterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
-    add: (state) => {
-      state.value += 2;
+    add: (state, action) => {
+      state.value += action.payload;
     },
-    sub: (state) => {
-      state.value -= 2;
+    sub: (state, action) => {
+      state.value -= action.payload;
     },
-    multiply: (state) => {
-      state.value *= 3;
+    multiply: (state, action) => {
+      state.value *= action.payload;
     },
-    divide: (state) => {
-      state.value /= 2;
+    divide: (state, action) => {
+      state.value /= action.payload;
     },
   },
 });

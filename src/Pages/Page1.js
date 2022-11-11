@@ -16,12 +16,12 @@ export const Page1 = () => {
   const navigate = useNavigate();
   const b = useSelector((state) => state.time.value);
   const answer = useSelector((state) => state.counter.value);
+  const addanswer = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(handleAnswer());
+    // dispatch(handleAnswer());
     console.log(num);
-    alert(num);
   };
   return (
     <div>
@@ -45,10 +45,10 @@ export const Page1 = () => {
       <br />
       <br />
       <br />
-      <Button onClick={() => dispatch(add())}>add</Button>
-      <Button onClick={() => dispatch(sub())}>sub</Button>
-      <Button onClick={() => dispatch(multiply())}>multiply</Button>
-      <Button onClick={() => dispatch(divide())}>divide</Button>
+      <Button onClick={() => dispatch(add(num))}>add</Button>
+      <Button onClick={() => dispatch(sub(num))}>sub</Button>
+      <Button onClick={() => dispatch(multiply(num))}>multiply</Button>
+      <Button onClick={() => dispatch(divide(num))}>divide</Button>
     </div>
   );
 };
